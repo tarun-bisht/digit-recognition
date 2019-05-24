@@ -1,0 +1,38 @@
+body
+{
+  background: -webkit-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+}
+#draw
+{
+  border: #000 dashed 3px;
+  background: #f1f1;
+}
+#feed
+{
+  border: #000 solid 2px;
+}
+.main
+{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.canvas
+{
+  align-self: center;
+  margin-bottom: 1rem;
+}
+.buttons
+{
+  align-self: center;
+}
+.button
+{
+  margin: 0 2rem;
+}
+.canvas-sm
+{
+  margin-top: 1rem;
+  align-self: center;
+}
