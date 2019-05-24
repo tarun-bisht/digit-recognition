@@ -4,7 +4,7 @@ var ctx;
 var predictbar;
 var stroke_color='#000000';
 var stroke_width=10;
-const model_url="https://github.com/tarun-bisht/DigitRecognition/blob/master/model/model.json";
+const model_url="../model/model.json";
 var model=tf.loadModel(model_url);
 function InitThis()
 {
