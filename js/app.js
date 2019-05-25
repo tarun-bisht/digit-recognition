@@ -6,7 +6,8 @@ var chart;
 var graph;
 var stroke_color='#000000';
 var stroke_width=10;
-const model_url="../model/model.json";
+//const model_url="../model/model.json";
+const model_url="https://drive.google.com/file/d/1s2MlHpFEqyxabIdDs_G0AaoUg9kFqLn1/view?usp=sharing";
 async function load()
 {
     model=await tf.loadLayersModel(model_url);
