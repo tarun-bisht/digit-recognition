@@ -3,13 +3,13 @@ var lastX, lastY;
 var ctx;
 var predictbar;
 var chart;
+var graph;
 var stroke_color='#000000';
 var stroke_width=10;
 const model_url="../model/model.json";
 async function load()
 {
     model=await tf.loadLayersModel(model_url);
-    chart=create_graph();
 }
 load();
 function InitThis()
@@ -18,6 +18,7 @@ function InitThis()
   feed=document.getElementById('feed').getContext("2d");
   predictbar=document.getElementById('prediction');
   chart=document.getElementById('predict-chart').getContext("2d");
+  graph=create_graph();
   $('#draw').mousedown(function (e) {
       mousePressed = true;
       Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, false);
@@ -62,8 +63,8 @@ function clear()
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
   feed.setTransform(1, 0, 0, 1, 0, 0);
   feed.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-  removeDataFromGraph(chart);
-  addDataToGraph(chart,[0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1]);
+  removeDataFromGraph(graph);
+  addDataToGraph(graph,[0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1]);
   predictbar.innerHTML="Predicted Digit = NAN".toString();
 }
 function predict()
@@ -77,8 +78,8 @@ function predict()
   }
   var input_tensor=tf.tensor4d(inputs,[1,28,28,1])
   var prediction=model.predict(input_tensor).dataSync();
-  removeDataFromGraph(chart);
-  addDataToGraph(chart,prediction);
+  removeDataFromGraph(graph);
+  addDataToGraph(graph,prediction);
   var number=indexOfMax(prediction);
   if(validPrediction(prediction))
   {
