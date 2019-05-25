@@ -2,59 +2,67 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>infinite-loop | Simple Drawing Pad</title>
+    <title>Digit Recognition | infinite-loop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/app.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.5/dist/tf.min.js"></script>
-    <script src="js/app.js" charset="utf-8" type="module"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="js/app.js" charset="utf-8"></script>
   </head>
   <body onload="InitThis()">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Handwritten Digit Recognition</a>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">Handwritten Digit Recognition</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarCollapse">
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="pages/about.html">About</a>
           </li>
         </ul>
       </div>
     </nav>
     <main>
       <div class="container main">
-        <div class="canvas">
-          <canvas id="draw" width="200" height="200"></canvas>
-        </div>
-        <div class="buttons">
-          <button id="clear" class="button btn btn-outline-dark">Clear</button>
-          <button id="predict" class="button btn btn-outline-dark">Predict</button>
-        </div>
-        <div class="canvas-sm">
-          <canvas id="feed" width="28" height="28"></canvas>
-        </div>
-	<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-          <div class="toast-header">
-            <strong class="mr-auto">Prediction</strong>
-            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+          <div class="row">
+              <div class="col">
+                  <div class="canvas">
+                    <canvas id="draw" width="300" height="300"></canvas>
+                    <div class="buttons">
+                      <button id="clear" class="button btn btn-outline-dark">Clear</button>
+                      <button id="predict" class="button btn btn-outline-dark">Predict</button>
+                    </div>
+                  </div>
+                  <div class="canvas-sm">
+                    <canvas id="feed" width="28" height="28"></canvas>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="chart">
+                      <canvas id="predict-chart" role='img'></canvas>
+                      <div class="predict-text" id="prediction">
+                          Predicted Digit = NAN
+                      </div>
+                  </div>
+              </div>
           </div>
-        <div class="toast-body" id="predict">
-          
-        </div>
       </div>
     </main>
-    <footer class="footer mt-auto py-3 fixed-bottom bg-dark">
-      <div class="container">
-        <span class="text-muted">Handcrafted and Made in India.</span>
-      </div>
+    <footer class="footer-panel">
+        <div class="container-fluid clearfix">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block card-text-sm">Copyright © 2019 All rights reserved.
+            </span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center card-text-sm"><i class="fas fa-heart" style="color:red"></i> Hand-crafted & made in India
+                <i class="fas fa-heart" style="color:red"></i>
+            </span>
+        </div>
     </footer>
     <!-- bootstrap js -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

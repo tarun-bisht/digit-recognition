@@ -1,38 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Quicksand|Source+Code+Pro');
 body
 {
-  background: -webkit-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+    font-family: 'Source Code Pro', monospace;
+  background: -webkit-linear-gradient(20deg, rgba(23,185,255,1) 0%, rgba(77,172,255,1) 50%, rgba(120,163,255,1) 90%, rgba(120,163,255,1) 100%);
+}
+a
+{
+  text-decoration:none;
+  color: #111;
+  cursor: pointer;
+}
+a:hover
+{
+  text-decoration: none;
 }
 #draw
 {
   border: #000 dashed 3px;
-  background: #f1f1;
-}
-#feed
-{
-  border: #000 solid 2px;
+  align-self: center;
 }
 .main
 {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 .canvas
 {
-  align-self: center;
-  margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 .buttons
 {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
   align-self: center;
 }
 .button
 {
-  margin: 0 2rem;
+  margin-left: 1rem;
+  align-self: center;
 }
 .canvas-sm
 {
-  margin-top: 1rem;
-  align-self: center;
+  display: none;
+}
+.predict-chart
+{
+    align-self: center;
+}
+.chart
+{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.predict-text
+{
+    align-self: center;
+    color: #fff;
+    font-size: 25px;
+    margin-top: 2rem;
+}
+.footer-panel
+{
+  background: #fff;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  position: fixed;
 }
