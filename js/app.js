@@ -6,8 +6,7 @@ var chart;
 var graph;
 var stroke_color='#000000';
 var stroke_width=10;
-//const model_url="../model/model.json";
-const model_url="https://drive.google.com/file/d/1s2MlHpFEqyxabIdDs_G0AaoUg9kFqLn1/view?usp=sharing";
+const model_url="https://ml-models11.herokuapp.com/model_digit_R";
 async function load()
 {
     model=await tf.loadLayersModel(model_url);
@@ -146,7 +145,7 @@ function create_graph()
         options:{
 
             responsive: true,
-            maintainAspectRatio: false,
+            maintainAspectRatio: true,
             legend:
             {
                 labels:
@@ -154,12 +153,9 @@ function create_graph()
                     fontColor:'#fff'
                 },
                 position:'right',
-                fullWidth:true
             }
         }
     });
-    dChart.canvas.parentNode.style.height = '300px';
-    dChart.canvas.parentNode.style.width = '500px';
     return dChart;
 }
 function addDataToGraph(chart,data)

@@ -2,7 +2,8 @@
 body
 {
     font-family: 'Source Code Pro', monospace;
-  background: -webkit-linear-gradient(20deg, rgba(23,185,255,1) 0%, rgba(77,172,255,1) 50%, rgba(120,163,255,1) 90%, rgba(120,163,255,1) 100%);
+    overflow: hidden;
+    background: -webkit-linear-gradient(20deg, rgba(23,185,255,1) 0%, rgba(77,172,255,1) 50%, rgba(120,163,255,1) 90%, rgba(120,163,255,1) 100%);
 }
 a
 {
@@ -61,6 +62,12 @@ a:hover
     font-size: 25px;
     margin-top: 2rem;
 }
+.portrait
+{
+    height: 180px;
+    width: 100px;
+    margin: 1rem;
+}
 .footer-panel
 {
   background: #fff;
@@ -68,4 +75,26 @@ a:hover
   width: 100%;
   padding: 1rem;
   position: fixed;
+}
+@media (max-width: 992px)
+{
+    .navbar-brand
+    {
+        font-size: 1rem;
+    }
+    .nav-link
+    {
+        font-size: 1rem;
+    }
+    .logo
+    {
+        height: 120px;
+        width: 120px;
+    }
+    .portrait
+    {
+        height: 120px;
+        width: 80px;
+        margin: 1rem;
+    }
 }
