@@ -97,4 +97,8 @@ a:hover
         width: 80px;
         margin: 1rem;
     }
+    .footer-panel
+    {
+        display:none;
+    }
 }
