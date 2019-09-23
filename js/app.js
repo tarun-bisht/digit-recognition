@@ -6,7 +6,7 @@ var chart;
 var graph;
 var stroke_color='#000000';
 var stroke_width=10;
-const model_url="https://ml-models11.herokuapp.com/model_digit_R";
+const model_url="https://ml-models11.herokuapp.com/model_mnist_digits";
 async function load()
 {
     model=await tf.loadLayersModel(model_url);
