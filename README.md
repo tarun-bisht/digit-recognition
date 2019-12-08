@@ -1,8 +1,6 @@
-<h1>Handwritten Digit Recognition</h1>
-<br>
-<ul>
-  <li><h3><a href="https://tarun-bisht.github.io/DigitRecognition/">Live Working Demo of project</a></h3></li>
-  <li><b>Neural Network Hello World Program. A Web Application developed with Tensorflowjs and Python, Tensorflow. Developed in Python and model loaded with
-    Tensorflowjs</b></li>
-  <li><a href="https://github.com/tarun-bisht/SimpleDrawingPad">Drawing Pad Used in Project</a></li>
-</ul>
+# Handwritten Digit Recognition
+  * ### [Live Working Demo of project](https://tarun-bisht.github.io/DigitRecognition/)
+  * A Web Application developed with Tensorflowjs recognize hand written digits(0-9).
+  * Model trained using Tensorflow, Python.
+  * Model hosted [here](https://ml-models11.herokuapp.com/model_mnist_digits) using [ml-model-sever](https://github.com/tarun-bisht/ml-model-server)
+  * [Drawing Pad Used in Project](https://github.com/tarun-bisht/SimpleDrawingPad)
