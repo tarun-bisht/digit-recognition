@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald|Quicksand|Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 body
 {
     font-family: 'Source Code Pro', monospace;
-    overflow: hidden;
     background: -webkit-linear-gradient(20deg, rgba(23,185,255,1) 0%, rgba(77,172,255,1) 50%, rgba(120,163,255,1) 90%, rgba(120,163,255,1) 100%);
 }
 a
@@ -14,6 +13,22 @@ a
 a:hover
 {
   text-decoration: none;
+}
+.loader-wrapper
+{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  background-color:#242f3f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  z-index: 100;
+  color: #fff;
+  text-align: center;
 }
 #draw
 {
@@ -62,12 +77,6 @@ a:hover
     font-size: 25px;
     margin-top: 2rem;
 }
-.portrait
-{
-    height: 180px;
-    width: 120px;
-    margin: 1rem;
-}
 .footer-panel
 {
   background: #fff;
@@ -86,16 +95,12 @@ a:hover
     {
         font-size: 1rem;
     }
-    .logo
+    .predict-text
     {
-        height: 120px;
-        width: 120px;
-    }
-    .portrait
-    {
-        height: 120px;
-        width: 80px;
-        margin: 1rem;
+        align-self: center;
+        color: #fff;
+        font-size: 18px;
+        margin-top: 2rem;
     }
     .footer-panel
     {

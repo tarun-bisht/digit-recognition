@@ -7,12 +7,14 @@ var graph;
 var stroke_color='#000000';
 var stroke_width=10;
 const model_url="https://ml-models11.herokuapp.com/model_mnist_digits";
-async function load()
-{
-    model=await tf.loadLayersModel(model_url);
-}
-load();
-function InitThis()
+(async function(){
+	model=await tf.loadLayersModel(model_url);
+	$(".loader-wrapper").fadeOut('slow');
+})();
+$(document).ready(function () {
+    Init();
+});
+function Init()
 {
   ctx = document.getElementById('draw').getContext("2d");
   feed=document.getElementById('feed').getContext("2d");
@@ -67,7 +69,7 @@ function clear()
   addDataToGraph(graph,[0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1]);
   predictbar.innerHTML="Predicted Digit = NAN".toString();
 }
-function predict()
+async function predict()
 {
   feed.drawImage(ctx.canvas,0,0,feed.canvas.width,feed.canvas.height);
   let data=feed.getImageData(0,0,feed.canvas.width,feed.canvas.height).data;
@@ -77,7 +79,7 @@ function predict()
     inputs.push(data[i]/255.0);
   }
   var input_tensor=tf.tensor4d(inputs,[1,28,28,1])
-  var prediction=model.predict(input_tensor).dataSync();
+  var prediction=await model.predict(input_tensor).data();
   removeDataFromGraph(graph);
   addDataToGraph(graph,prediction);
   var number=indexOfMax(prediction);
