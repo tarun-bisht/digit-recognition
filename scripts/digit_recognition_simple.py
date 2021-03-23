@@ -68,28 +68,3 @@ for i in range(100):
     num=np.argmax(prediction[i])
     print(num)
     plt.show()
-
-"""# Saving Model to google Drive to Download and later use it locally"""
-
-!pip install -U -q PyDrive
-from pydrive.auth import GoogleAuth
-from pydrive.drive import GoogleDrive
-from google.colab import auth
-from oauth2client.client import GoogleCredentials
-
-# 1. Authenticate and create the PyDrive client.
-auth.authenticate_user()
-gauth = GoogleAuth()
-gauth.credentials = GoogleCredentials.get_application_default()
-drive = GoogleDrive(gauth)
-
-# 2. Save Keras Model or weights on google drive
-
-# create on Colab directory
-model.save('model.h5')
-model_file = drive.CreateFile({'title' : 'model.h5'})
-model_file.SetContentFile('model.h5')
-model_file.Upload()
-
-# download to google drive
-drive.CreateFile({'id': model_file.get('id')})
