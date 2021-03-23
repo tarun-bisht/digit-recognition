@@ -10,7 +10,15 @@ jobs:
     runs-on: ubuntu-16.04
     steps:
       - uses: actions/checkout@v2
+      # Use GitHub Actions' cache to shorten build times and decrease load on servers
+      - uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          restore-keys: ${{ runner.os }}-gems-
       - uses: helaili/jekyll-action@2.0.1
+        with:
+          jekyll_src: './site'
+          gem_src: './site/Gemfile'
         env:
           JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
-          working-directory: ./site
