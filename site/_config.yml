@@ -28,11 +28,11 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 twitter:
   card: summary
-  username: tarun_bisht11
+  username: itstarunbisht
 
 logo: /assets/images/logo_primary.svg
   
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/digit-recognition" # the subpath of your site, e.g. /blog
 url: "https://www.tarunbisht.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 contact:
@@ -66,9 +66,9 @@ social:
     - https://www.kaggle.com/tarunbisht11
   youtube: https://www.youtube.com/channel/UCSxE20aTc9IJFF3ZQb1cbLA
   usernames:
-    twitter: tarun_bisht11
+    twitter: itstarunbisht
     github:  tarun-bisht
-    instagram: tarunbisht11
+    instagram: itstarunbisht
     linkedin: tarun-bisht11
     kaggle: tarunbisht11
     medium: tarunbisht11
@@ -83,7 +83,6 @@ permalink: pretty
 # define used plugins
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-seo-tag
 
 # syntax highlighting and define markdown
