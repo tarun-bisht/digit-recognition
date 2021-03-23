@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-16.04
     defaults:
       run:
-        working-directory: site
+        working-directory: ./site
     steps:
       - uses: actions/checkout@v2
       - uses: helaili/jekyll-action@2.0.1
