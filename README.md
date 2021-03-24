@@ -10,5 +10,6 @@
 Application is hosted in [http://www.tarunbisht.com/digit-recognition/](http://www.tarunbisht.com/digit-recognition/)
 
 ## Resources used
+- [Kaggle Notebook](https://www.kaggle.com/tarunbisht11/mnist-digit-recognition-convnet-with-leakyrelu)
 - [Hosted Model](https://models-lib.web.app/models/mnist_digits/model.json)
 - [Drawing Pad Used in Project](https://github.com/tarun-bisht/SimpleDrawingPad)
