@@ -1,12 +1,3 @@
-// functions to run when page loads 
-window.onload=function()
-{
-    nav_menu();
-    animate_containers();
-    filter_projects();
-    LazyLoad();
-    dark_mode_switch();
-}
 // handle navigation menu (reponsive nav menu), sticky navigation and active links
 function nav_menu()
 {

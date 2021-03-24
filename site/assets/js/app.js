@@ -17,7 +17,8 @@ else
 document.getElementById("clear").disabled=true;
 document.getElementById("predict").disabled=true;
 const model_url="https://models-lib.web.app/models/mnist_digits/model.json";
-Init();
+dark_mode_switch();
+animate_containers();
 (async function(){
 	model=await tf.loadLayersModel(model_url);
     document.getElementById("loader-wrapper").style="transition: all .3s ease 0s;display:none;";
@@ -25,6 +26,13 @@ Init();
     document.getElementById("clear").disabled=false;
     document.getElementById("predict").disabled=false;
 });
+window.onload=function()
+{
+    nav_menu();
+    filter_projects();
+    LazyLoad();
+    Init();
+}
 function Init()
 {
     ctx = document.getElementById('draw').getContext("2d");
