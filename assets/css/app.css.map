@@ -1,0 +1,18 @@
+{
+	"version": 3,
+	"file": "app.css",
+	"sources": [
+		"app.scss",
+		"_sass/app.scss",
+		"_sass/_variables.scss",
+		"_sass/_breakpoints.scss"
+	],
+	"sourcesContent": [
+		"@import \"app\";\n",
+		"@import \"variables\";\n@import \"breakpoints\";\n\n#loader-wrapper\n{\n    display: flex;\n    justify-content: center;\n    \n    .spinner\n    {\n        height: 40px;\n        width: 40px;\n        margin-left: 1rem;\n        margin: 0;\n\n        &::before\n        {\n            height: 20px;\n            width: 20px;\n        }\n    }\n}\n#draw\n{\n  border:  var(--secondary) solid 1px;\n  background: var(--primary);\n  align-self: center;\n}\n.flexer\n{\n    display: flex;\n}\n.canvas-sm\n{\n  display: none;\n}\n.chart\n{\n    max-width: 512px;\n    text-align: center;\n}\n.predict-text\n{\n    align-self: center;\n    color: var(--secondary);\n    font-size: 25px;\n    margin-top: 2rem;\n\n    @include break1\n    {\n        font-size: 18px;\n    }\n}\n.button\n{\n    margin-right: 0.5rem;\n}",
+		"// website font\n$font:'Poppins',sans-serif; \n// large screen (desktop, tv)\n$break1:1000px;\n// medium size screen (tablet)\n$break2:768px;\n// small size devices (mobile)\n$break3:460px;",
+		"// large screen breakpoints\n@mixin break1\n{\n    @media only screen and (max-width:#{$break1})\n    {\n        @content;\n    }\n}\n\n// medium screen breakpoints\n@mixin break2\n{\n    @media only screen and (max-width:#{$break2})\n    {\n        @content;\n    }\n}\n\n// small screen breakpoints\n@mixin break3\n{\n    @media only screen and (max-width:#{$break3})\n    {\n        @content;\n    }\n}"
+	],
+	"names": [],
+	"mappings": "ACGA,AAAA,eAAe,AACf,CACI,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CAe1B,AAlBD,AAKI,eALW,CAKX,QAAQ,AACR,CACI,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,IAAI,CACX,WAAW,CAAE,IAAI,CACjB,MAAM,CAAE,CAAC,CAOZ,AAjBL,AAYQ,eAZO,CAKX,QAAQ,EAOD,MAAM,AACT,CACI,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,IAAI,CACd,AAGT,AAAA,KAAK,AACL,CACE,MAAM,CAAG,gBAAgB,CAAC,KAAK,CAAC,GAAG,CACnC,UAAU,CAAE,cAAc,CAC1B,UAAU,CAAE,MAAM,CACnB,AACD,AAAA,OAAO,AACP,CACI,OAAO,CAAE,IAAI,CAChB,AACD,AAAA,UAAU,AACV,CACE,OAAO,CAAE,IAAI,CACd,AACD,AAAA,MAAM,AACN,CACI,SAAS,CAAE,KAAK,CAChB,UAAU,CAAE,MAAM,CACrB,AACD,AAAA,aAAa,AACb,CACI,UAAU,CAAE,MAAM,CAClB,KAAK,CAAE,gBAAgB,CACvB,SAAS,CAAE,IAAI,CACf,UAAU,CAAE,IAAI,CAMnB,AEjDG,MAAM,oCFsCV,CAAA,AAAA,aAAa,AACb,CAQQ,SAAS,CAAE,IAAI,CAEtB,CAAA,AACD,AAAA,OAAO,AACP,CACI,YAAY,CAAE,MAAM,CACvB"
+}

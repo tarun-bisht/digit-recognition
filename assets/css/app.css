@@ -1,0 +1,3 @@
+#loader-wrapper{display:flex;justify-content:center}#loader-wrapper .spinner{height:40px;width:40px;margin-left:1rem;margin:0}#loader-wrapper .spinner::before{height:20px;width:20px}#draw{border:var(--secondary) solid 1px;background:var(--primary);align-self:center}.flexer{display:flex}.canvas-sm{display:none}.chart{max-width:512px;text-align:center}.predict-text{align-self:center;color:var(--secondary);font-size:25px;margin-top:2rem}@media only screen and (max-width: 1000px){.predict-text{font-size:18px}}.button{margin-right:0.5rem}
+
+/*# sourceMappingURL=app.css.map */
