@@ -1,24 +1,19 @@
-@import "variables";
-@import "breakpoints";
-
 #loader-wrapper
 {
     display: flex;
     justify-content: center;
-    
-    .spinner
-    {
-        height: 40px;
-        width: 40px;
-        margin-left: 1rem;
-        margin: 0;
-
-        &::before
-        {
-            height: 20px;
-            width: 20px;
-        }
-    }
+}
+#load-wrapper .spinner
+{
+    height: 40px;
+    width: 40px;
+    margin-left: 1rem;
+    margin: 0;
+}
+#load-wrapper .spinner::before
+{
+    height: 20px;
+    width: 20px;
 }
 #draw
 {
@@ -45,13 +40,15 @@
     color: var(--secondary);
     font-size: 25px;
     margin-top: 2rem;
-
-    @include break1
-    {
-        font-size: 18px;
-    }
 }
 .button
 {
     margin-right: 0.5rem;
+}
+@media only screen and (max-width: 1000px)
+{
+    .predict-text
+    {
+        font-size: 18px;
+    }
 }
